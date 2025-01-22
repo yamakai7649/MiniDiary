@@ -6,17 +6,9 @@ const uploadRouter = require("./routes/upload");
 const commentsRouter = require("./routes/comments");
 const notificationRouter = require("./routes/notification");
 const mongoose = require("mongoose");
-<<<<<<< HEAD
 require('dotenv').config();
 const dbUrl = process.env.MONGODB_URL;
 const path = require("path");
-=======
-const cors = require("cors");
-require('dotenv').config();
-const dbUrl = process.env.MONGODB_URL;
-const path = require("path");
-const CustomError = require("./customError");
->>>>>>> ed8c52b (Initial commit)
 const session = require("express-session");
 const MongoStore = require('connect-mongo');
 
@@ -32,11 +24,9 @@ mongoose.connect(dbUrl)
 
 const app = express();
 
-<<<<<<< HEAD
+
 const isProduction = process.env.NODE_ENV;
 
-=======
->>>>>>> ed8c52b (Initial commit)
 app.use(session({
   secret: process.env.SESSION_SECRET_KEY,
   resave: false,
@@ -44,15 +34,9 @@ app.use(session({
   cookie: {
     path: "/",
     maxAge: 1000 * 60 * 60 * 24, // 1日
-<<<<<<< HEAD
     secure: isProduction, // HTTPSを使用しない開発環境ではfalse
     httpOnly: true, // JavaScriptからアクセス不可
     sameSite: isProduction ? "strict":"lax", // CSRFを防ぎつつクロスサイト連携も可能
-=======
-    secure: false, // HTTPSを使用しない開発環境ではfalse
-    httpOnly: true, // JavaScriptからアクセス不可
-    sameSite: "lax", // CSRFを防ぎつつクロスサイト連携も可能
->>>>>>> ed8c52b (Initial commit)
   },
   store: MongoStore.create({
     mongoUrl: dbUrl,
@@ -62,7 +46,6 @@ app.use(session({
 //POSTMANでExpress がリクエストの JSON ボディを解析し、req.body にアクセスできるようになるため
 app.use(express.json());
 
-<<<<<<< HEAD
 app.use("/images", express.static(path.join(__dirname, "public/images")));
 
 app.use(express.static(path.join(__dirname, "build")));
@@ -76,23 +59,6 @@ app.use("/notification", notificationRouter);
 
 app.all("*", (req, res, next) => {
   res.sendFile(path.resolve(__dirname, "build", "index.html"));
-=======
-app.use(cors({
-  origin: 'http://localhost:3000', // フロントエンドのオリジン
-}));
-
-app.use("/images", express.static(path.join(__dirname, "public/images")));
-
-app.use("/api/users", usersRouter);
-app.use("/api/posts", postsRouter);
-app.use("/api/auth", authRouter);
-app.use("/api/upload", uploadRouter);
-app.use("/api/comments", commentsRouter);
-app.use("/api/notification", notificationRouter);
-
-app.all("*", (req, res, next) => {
-  next(new CustomError("指定されたリソースが存在しないため、データを取得できませんでした。", 404));
->>>>>>> ed8c52b (Initial commit)
 });
 
 app.use((err, req, res, next) => {
@@ -101,11 +67,8 @@ app.use((err, req, res, next) => {
   res.status(status).json({ message: message });
 });
 
-<<<<<<< HEAD
+
 const PORT = process.env.PORT || 8000;
-=======
-const PORT = 8000;
->>>>>>> ed8c52b (Initial commit)
 app.listen(PORT, () => {
     console.log("ポート8000で起動中...");
 });

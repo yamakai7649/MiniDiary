@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 .env
 /public/images/
 /node_modules/
-=======
-.env
->>>>>>> ed8c52b (Initial commit)
+
