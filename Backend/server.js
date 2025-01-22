@@ -45,6 +45,7 @@ app.use(session({
 //POSTMANでExpress がリクエストの JSON ボディを解析し、req.body にアクセスできるようになるため
 app.use(express.json());
 
+
 /*app.use(cors({
   origin: process.env.FRONTEND_ORIGIN, // フロントエンドのオリジン
 }));*/
