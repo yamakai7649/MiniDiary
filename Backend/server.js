@@ -46,7 +46,7 @@ app.use(session({
 app.use(express.json());
 
 app.use(cors({
-  origin: 'http://localhost:3000', // フロントエンドのオリジン
+  origin: process.env.FRONTEND_ORIGIN || 'http://localhost:3000', // フロントエンドのオリジン
 }));
 
 app.use("/images", express.static(path.join(__dirname, "public/images")));
@@ -68,7 +68,7 @@ app.use((err, req, res, next) => {
   res.status(status).json({ message: message });
 });
 
-const PORT = 8000;
+const PORT = process.env.PORT || 8000;
 app.listen(PORT, () => {
     console.log("ポート8000で起動中...");
 });
