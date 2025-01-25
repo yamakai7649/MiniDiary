@@ -72,6 +72,8 @@ router.get("/", async (req, res) => {
 //セッションからユーザーを取得
 router.get("/user", async (req, res, next) => {
     try {
+        console.log("うんち");
+        console.log(req.session.user);
         if (!req.session.user) return null;
         const { id } = req.session.user;
         const user = await User.findById(id);
