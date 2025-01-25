@@ -4,7 +4,6 @@ const Post = require("../models/Post");
 const User = require("../models/User");
 const Comment = require("../models/Comment");
 const Notification = require("../models/Notification");
-const CustomError = require("../customError");
 
 
 //投稿を作成する

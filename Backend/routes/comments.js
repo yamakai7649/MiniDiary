@@ -4,7 +4,6 @@ const Comment = require("../models/Comment");
 const User = require("../models/User");
 const Post = require("../models/Post");
 const Notification = require("../models/Notification");
-const CustomError = require("../customError");
 
 //コメントを作成する
 router.post("/:postId", async (req, res, next) => {

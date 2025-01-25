@@ -1,7 +1,6 @@
 const express = require("express");
 const router = express.Router();
 const User = require("../models/User");
-const CustomError = require("../customError");
 const { hashPassword,verifyPassword } = require("../hashPassword");
 
 //ユーザー登録
