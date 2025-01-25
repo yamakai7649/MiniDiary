@@ -11,6 +11,7 @@ const dbUrl = process.env.MONGODB_URL;
 const path = require("path");
 const session = require("express-session");
 const MongoStore = require('connect-mongo');
+const cors = require("cors");
 
 mongoose.connect(dbUrl)
     .then(() => {
@@ -41,6 +42,13 @@ app.use(session({
     mongoUrl: dbUrl,
   })
 }));
+
+app.use(
+  cors({
+    origin: process.env.FRONTEND_ORIGIN || "http://localhost:3000", // フロントエンドURL
+    credentials: true, // クッキーを許可
+  })
+);
 
 //POSTMANでExpress がリクエストの JSON ボディを解析し、req.body にアクセスできるようになるため
 app.use(express.json());
