@@ -30,6 +30,7 @@ router.post("/login", async (req, res, next) => {
             req.session.save(() => {
                 if (err) return next(err);
             });
+            console.log(req.session);
             return res.status(200).json(user);
         });
     } catch (err) {
