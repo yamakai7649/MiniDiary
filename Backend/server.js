@@ -45,9 +45,6 @@ app.use(session({
 //POSTMANでExpress がリクエストの JSON ボディを解析し、req.body にアクセスできるようになるため
 app.use(express.json());
 
-/*app.use(cors({
-  origin: process.env.FRONTEND_ORIGIN, // フロントエンドのオリジン
-}));*/
 
 app.use("/images", express.static(path.join(__dirname, "public/images")));
 
@@ -59,10 +56,6 @@ app.use("/auth", authRouter);
 app.use("/upload", uploadRouter);
 app.use("/comments", commentsRouter);
 app.use("/notification", notificationRouter);
-
-/*app.all("*", (req, res, next) => {
-  next(new CustomError("指定されたリソースが存在しないため、データを取得できませんでした。", 404));
-});*/
 
 app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "build", "index.html"));
