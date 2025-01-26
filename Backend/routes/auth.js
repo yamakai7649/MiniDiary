@@ -1,7 +1,8 @@
 const express = require("express");
 const router = express.Router();
 const User = require("../models/User");
-const { hashPassword,verifyPassword } = require("../hashPassword");
+const { hashPassword, verifyPassword } = require("../hashPassword");
+const isProduction = process.env.NODE_ENV === "production";
 
 //ユーザー登録
 router.post("/register", async (req, res, next) => {
@@ -29,8 +30,8 @@ router.post("/login", async (req, res, next) => {
             req.session.user = { id: user._id };
             req.session.save(() => {
                 if (err) return next(err);
+                console.log(req.session);
             });
-            console.log(req.session);
             return res.status(200).json(user);
         });
     } catch (err) {
@@ -46,9 +47,9 @@ router.post("/logout", async (req, res, next) => {
             res.clearCookie("connect.sid",
                 {
                     path: "/",
-                    secure: false, // HTTPSを使用しない開発環境ではfalse
+                    secure: isProduction, // HTTPSを使用しない開発環境ではfalse
                     httpOnly: true, // JavaScriptからアクセス不可
-                    sameSite: "lax", // CSRFを防ぎつつクロスサイト連携も可能
+                    sameSite: isProduction ? "strict" :"lax", // CSRFを防ぎつつクロスサイト連携も可能
                 }
             );
             return res.status(200).json({ message: "ログアウトしました" });

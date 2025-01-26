@@ -50,6 +50,8 @@ app.use(
   })
 );
 
+app.set("trust proxy", 1);
+
 //POSTMANでExpress がリクエストの JSON ボディを解析し、req.body にアクセスできるようになるため
 app.use(express.json());
 
