@@ -19,6 +19,10 @@ const userSchema = new Schema({
         type: String,
         default: ""
     },
+    profilePictureId: {
+        type: String,
+        default: ""
+    },
     followers: {
         type: Array,
         default: []

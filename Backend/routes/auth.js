@@ -30,7 +30,6 @@ router.post("/login", async (req, res, next) => {
             req.session.user = { id: user._id };
             req.session.save(() => {
                 if (err) return next(err);
-                console.log(req.session);
             });
             return res.status(200).json(user);
         });
@@ -73,8 +72,6 @@ router.get("/", async (req, res) => {
 //セッションからユーザーを取得
 router.get("/user", async (req, res, next) => {
     try {
-        console.log("うんち");
-        console.log(req.session.user);
         if (!req.session.user) return null;
         const { id } = req.session.user;
         const user = await User.findById(id);
