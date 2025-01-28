@@ -4,64 +4,44 @@ MiniDiaryは、ユーザーが日々の思いや活動を簡単に記録し、�
 
 ## 🚀 デモ
 
-https://minidiary.onrender.com
+[こちらからデモをお試しください](https://minidiary.onrender.com)
 
 ### サンプルアカウント
 
-・**ユーザー名**: サンプルくん
+・**ユーザー名**:  サンプルくん
 
-・**パスワード**: abcd1234
+・**パスワード**:  abcd1234
+
+## 💡 MiniDiaryってどんなアプリ？
+
+日常の中で「今日の気分や出来事をちょっと残しておきたい」と思ったことはありませんか？MiniDiaryはそんなあなたのためのシンプルな日記アプリです。忙しい人にも優しく、ほんの数クリックで思い出を残すことができます。
 
 ## 🌟 主な機能
 
-・**日記の作成と管理**: テキストや画像を使って簡単に日記を記録。
+・**日記の作成と管理**:  テキストや画像を使って簡単に日記を記録。
 
-・**検索・フィルター機能**: 日記をキーワードや日付で検索。
+・**検索・フィルター機能**:  日記をキーワードや日付で検索。
 
-・**感情タグ付け**: 各日記に感情や気分をタグ付け。
+・**感情タグ付け**:  各日記に感情や気分をタグ付け。
 
-・**シンプルで直感的なUI**: モダンで使いやすいインターフェース。
+・**シンプルで直感的なUI**:  モダンで使いやすいインターフェース。
 
-・**モバイル対応**: スマートフォンでも快適に利用可能。
+・**モバイル対応**:  スマートフォンでも快適に利用可能。
 
 ## 🛠️ 技術スタック
 
-・**フロントエンド**: React, Tailwind CSS
+・**フロントエンド**:  React, Redux
 
-・**バックエンド**: Node.js, Express.js
+・**バックエンド**:  Node.js, Express
 
-・**データベース**: MongoDB
+・**データベース**:  MongoDB
 
-・**認証**: JSON Web Token (JWT) を使用したユーザー認証
+・**デプロイ**:  Render
 
-・**デプロイ**: [例: Vercel（フロントエンド） & Render（バックエンド）]
+## 📧 問い合わせ
 
-## Learn More
+質問や提案がある場合は以下までご連絡ください。
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+・**GitHub**:  [yamakai7649](https://github.com/yamakai7649)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+・**メールアドレス**:  haishanben8@gmail.com
