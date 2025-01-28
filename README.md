@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# Mini Diary
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+MiniDiaryは、ユーザーが日々の思いや活動を簡単に記録し、共有できるシンプルかつ直感的な日記アプリです。MERNスタック（MongoDB, Express.js, React, Node.js）を使用して開発され、効率的かつモダンなユーザー体験を提供します。
 
 ## Available Scripts
 
